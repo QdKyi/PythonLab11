@@ -2,6 +2,6 @@ from enum import Enum
 
 
 class SportType(Enum):
-    kayaking = 1
-    iceclimbing = 2
-    wingsuitflying = 3
+    KAYAKING = 1
+    ICE_CLIMBING = 2
+    WINGSUIT_FLYING = 3

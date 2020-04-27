@@ -17,12 +17,12 @@ class ExtremeSportEquipManager:
 
     def find_by_sport_type(self, sport_type):
         """
-        >>> print(equip_manager.find_by_sport_type(SportType.kayaking)[0].sport_type)
-        SportType.kayaking
-        >>> print(equip_manager.find_by_sport_type(SportType.kayaking)[1].sport_type)
-        SportType.kayaking
-        >>> equip_manager.find_by_sport_type(SportType.kayaking)
-        [(Sport type: SportType.kayaking), (Sport type: SportType.kayaking)]
+        >>> equip_manager.find_by_sport_type(SportType.KAYAKING)[0].sport_type
+        <SportType.KAYAKING: 1>
+        >>> equip_manager.find_by_sport_type(SportType.KAYAKING)[1].sport_type
+        <SportType.KAYAKING: 1>
+        >>> equip_manager.find_by_sport_type(SportType.KAYAKING)
+        [(Sport type: SportType.KAYAKING), (Sport type: SportType.KAYAKING)]
         """
         found_equip = list(
             filter(lambda iterated_equip: sport_type == iterated_equip.sport_type, self.equip_list))

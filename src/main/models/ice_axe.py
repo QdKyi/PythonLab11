@@ -4,8 +4,10 @@ from src.main.models.sport_type import SportType
 
 class IceAxe(AbstractExtremeSportEquip):
 
-    def __init__(self, price_in_uah, weight, year_of_production, producer_name, sport_type=SportType.iceclimbing):
+    def __init__(self, price_in_uah, weight, year_of_production, producer_name, sport_type=SportType.ICE_CLIMBING,
+                 sharpness=1):
         super().__init__(price_in_uah, weight, year_of_production, producer_name, sport_type)
+        self.sharpness = sharpness
 
     def __str__(self):
         return super().__str__()
