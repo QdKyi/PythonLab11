@@ -13,3 +13,6 @@ class AbstractExtremeSportEquip(ABC):
     def __str__(self):
         return "price = %s uah, weight = %s kilos, year of production = %s producer name = %s " % (
             self.price_in_uah, self.weight, self.year_of_production, self.producer_name)
+
+    def __repr__(self):
+        return "(Sport type: {})".format(self.sport_type)

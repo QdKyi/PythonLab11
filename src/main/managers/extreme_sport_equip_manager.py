@@ -12,8 +12,8 @@ class ExtremeSportEquipManager:
     def add_one_equip(self, one_equip):
         self.equip_list.append(one_equip)
 
-    def add_equip(self, equip):
-        self.equip_list += equip
+    def add_equip(self, equip_list):
+        self.equip_list.extend(equip_list)
 
     def find_by_sport_type(self, sport_type):
         """
@@ -21,6 +21,8 @@ class ExtremeSportEquipManager:
         SportType.kayaking
         >>> print(equip_manager.find_by_sport_type(SportType.kayaking)[1].sport_type)
         SportType.kayaking
+        >>> equip_manager.find_by_sport_type(SportType.kayaking)
+        [(Sport type: SportType.kayaking), (Sport type: SportType.kayaking)]
         """
         found_equip = list(
             filter(lambda iterated_equip: sport_type == iterated_equip.sport_type, self.equip_list))
