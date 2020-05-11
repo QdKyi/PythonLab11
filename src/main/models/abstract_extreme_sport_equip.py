@@ -1,7 +1,6 @@
-from abc import ABC
 
 
-class AbstractExtremeSportEquip(ABC):
+class AbstractExtremeSportEquip:
 
     def __init__(self, price_in_uah, weight, year_of_production, producer_name, sport_type):
         self.price_in_uah = price_in_uah
